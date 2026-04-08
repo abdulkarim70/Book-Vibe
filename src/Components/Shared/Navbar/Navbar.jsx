@@ -4,7 +4,7 @@ import { Link, NavLink } from 'react-router';
 const Navbar = () => {
   const links=<>
  <li><NavLink to={'/'} className={({isActive})=>`mr-1 font-semibold ${ isActive? 'text-green-500 border border-green-500':''}` }>Home</NavLink></li>
- <li><NavLink to={'/books'} className={({isActive})=>` mr-1 font-semibold ${ isActive? 'text-green-500 border border-green-500':''}` }>Books</NavLink></li>
+ <li><NavLink to={'/books'} className={({isActive})=>` mr-1 font-semibold ${ isActive? 'text-green-500 border border-green-500':''}` }>Listed Books</NavLink></li>
  <li><NavLink to={'/page-to-reload'} className={({isActive})=>`font-semibold ${ isActive? 'text-green-500 border border-green-500':''}`}>Page to read</NavLink></li>
   </>
 
@@ -36,8 +36,10 @@ const Navbar = () => {
    {links}
     </ul>
   </div>
-  <div className="navbar-end">
-    <a className="btn">Button</a>
+  <div className="navbar-end gap-4">
+   <button className="btn  btn-success text-white">Signin</button>
+   <button className="btn  btn-accent text-white">Signup</button>
+
   </div>
 </div>
         
